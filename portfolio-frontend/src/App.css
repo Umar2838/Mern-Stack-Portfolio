@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+.dancing_text {
+  font-family: "Dancing Script", cursive;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #d1e5ff;
+}
+::-webkit-scrollbar-thumb {
+  background:#642bff;
+  border-radius: 7px;
+}
+.text-tubeLight-effect {
+  display: flex;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+  outline: none;
+  overflow-y: hidden;
+  /* -webkit-box-reflect: below -27px linear-gradient(transparent, #ffffff40); */
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: gray;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90.1%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 1px rgb(150, 150, 150), 0 0 2px rgb(150, 150, 150),
+      0 0 2px rgb(150, 150, 150), 0 0 5px rgb(150, 150, 150),
+      0 0 20px rgb(150, 150, 150);
+  }
+}
+html , body{
+  width: 100%;
+  height: 100%
+}
+#root{
+  width: 100%;
+  height: 100%;
+}
+.app{
+  width: 100%;
+  height: 100%;
+  
+}
+
+.progress-bar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background:#642bff;
+  transform-origin: 0%;
+  border-radius: 10px;
+}
+
+
+
+
+
+/* Scroll animation for automatic horizontal scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Define the scrolling animation */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Scroll container to make items move continuously */
+.scroll-container {
+  display: flex;
+  width: max-content;
+  animation: infinite-scroll 10s linear infinite;
+}
+
+/* Speed control */
+.scroll-container:hover {
+  animation-play-state: paused; /* Pause on hover if needed */
+}
